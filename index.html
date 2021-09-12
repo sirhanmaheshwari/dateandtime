@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Date and Time</title>
+    
+<script>
+ 
+    
+let a;
+let date;
+let time;
+let day;
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+setInterval(() => {
+  a= new Date();
+ time=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds() ;
+ 
+ date= a.toLocaleDateString(undefined, options);
+
+  document.getElementById('time').innerHTML=time+"<br>  on "+ date;
+  
+}, 1000);
+
+</script>
+  <body>
+ 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-light bg-light py-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="" width="50" height="40" class="d-inline-block align-text-top">
+            <b>TIME AND DATE
+            </b>
+          </a>
+        </div>
+      </nav>
+      <div class="container my-4">
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/08/06080627/pexels-photo-TIME-677x1024.jpeg" alt="" width="80" height="100">
+            <h1 class="display-5 fw-bold">Current Time is: <span id="time"></span> </h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4"> We are here to show you the time for different countries</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              
+                <a class="btn btn-primary" href="https://www.timeanddate.com/worldclock/" role="button">Browse time for different countries</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            
+          </ul>
+          <p class="text-center text-muted">© Created by Sirhan Maheshwari, 2021</p>
+        </footer>
+      </div>
+  </body>
+</html>
